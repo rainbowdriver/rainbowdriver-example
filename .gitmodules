@@ -1,0 +1,3 @@
+[submodule "rainbowdriver-example/js/rainbowdriver-client"]
+	path = rainbowdriver-example/js/rainbowdriver-client
+	url = git@github.com:rainbowdriver/rainbowdriver-client.git
