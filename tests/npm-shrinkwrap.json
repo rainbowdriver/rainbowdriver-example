@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "wd": {
+      "version": "0.0.21",
+      "dependencies": {
+        "async": {
+          "version": "0.1.22"
+        }
+      }
+    }
+  }
+}
