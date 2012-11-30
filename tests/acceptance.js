@@ -20,16 +20,28 @@ browser.init({
     browser.elementByCssSelector('.win-item', function (err, el) {
         if (err) {
             console.log(err);
+            browser.quit();
             return;
         }
         el.click(function () {
             browser.elementByCssSelector(".pagetitle", function (err, e2) {
                 if (err) {
                     console.log(err);
+                    browser.quit();
                     return;
                 }
                 e2.textPresent("Group Title: 1", function (err, present) {
                     assert.ok(present, "Not on the right page");
+                    browser.elementByCssSelector('.win-backbutton', function (err, el) {
+                        if (err) {
+                            console.log(err);
+                            browser.quit();
+                            return;
+                        }
+                        el.click(function () {
+                            browser.quit();
+                        });
+                    });
                 });
             });
         });
